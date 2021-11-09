@@ -1,0 +1,12 @@
+    // Basic DFS - no additions
+    static void dfs(int node, boolean[] visited)
+    {
+        visited[node] = true;
+        for(int neighbor : adjList[node])
+        {
+            if (!visited[neighbor])
+            {
+                dfs(neighbor, visited);
+            }
+        }
+    }
